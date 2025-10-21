@@ -13,9 +13,9 @@
     <header>
         <img src="#" alt="">
         <nav>
-            <button><img src="#" alt="car"></button>
-            <button><img src="#" alt="profile"></button>
-            <button><img src="#" alt="menu"></button>
+            <button aria-label="Автомобили"><img src="#" alt="car"></button>
+            <button aria-label="Профиль"><img src="#" alt="profile"></button>
+            <button aria-label="Меню"><img src="#" alt="menu"></button>
         </nav>
     </header>
     <main>
@@ -34,46 +34,31 @@
 
         <section class="rent">
             <h2>Заказать аренду online</h2>
-            <label>Начало аренды</label>
-            <input type="date" class="rent-date">
-            <label>Завершение аренды</label>
-            <input type="date" class="rent-date">
+
+            <label for="start-rent">Начало аренды</label>
+            <input type="date" id="start-rent" class="rent-date">
+
+            <label for="end-rent">Завершение аренды</label>
+            <input type="date" id="end-rent" class="rent-date">
+
             <ul class="checkbox-cartype">
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="suv">
-                        Внедорожник
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="suv">Внедорожник</label>
                 </li>
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="sport">
-                        Спорт
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="sport">Спорт</label>
                 </li>
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="premium">
-                        Премиум
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="premium">Премиум</label>
                 </li>
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="business">
-                        Бизнес
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="business">Бизнес</label>
                 </li>
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="sportcar">
-                        Спорткар
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="sportcar">Спорткар</label>
                 </li>
                 <li>
-                    <label>
-                        <input type="checkbox" class="cartype" value="comfort">
-                        Комфорт
-                    </label>
+                    <label><input type="checkbox" class="cartype" value="comfort">Комфорт</label>
                 </li>
             </ul>
             <button class="variants">Найти варианты</button>
@@ -83,21 +68,11 @@
             <h2>Наш автопарк</h2>
             <button>Смотреть все</button>
             <ul>
-                <li>
-                    <button>Внедорожники</button>
-                </li>
-                <li>
-                    <button>Бизнес</button>
-                </li>
-                <li>
-                    <button>Спорткар</button>
-                </li>
-                <li>
-                    <button>Премиум</button>
-                </li>
-                <li>
-                    <button>Комфорт</button>
-                </li>
+                <li><button>Внедорожники</button></li>
+                <li><button>Бизнес</button></li>
+                <li><button>Спорткар</button></li>
+                <li><button>Премиум</button></li>
+                <li><button>Комфорт</button></li>
             </ul>
 
             <article>
@@ -164,10 +139,10 @@
                 <input type="text" placeholder="Имя" name="Name">
                 <input type="tel" placeholder="+7 (916) 123-45-67" name="Phone">
 
-                <button>Забронировать</button>
+                <button type="submit">Забронировать</button>
 
-                <input type="checkbox" required>
-                <p>Отправляя форму, я соглашаюсь с <a href="#">политикой обработки персональных данных</a></p>
+                <input type="checkbox" id="checkbox-agreement" required>
+                <label for="checkbox-agreement">Отправляя форму, я соглашаюсь с <a href="#">политикой обработки персональных данных</a></p></label>
             </form>
             <p>Dizrental в Москве предлагает широкий выбор моделей от ведущих производителей, таких как Mercedes, BMW, Audi . Клиенты могут выбирать между спортивными автомобилями, роскошными седанами или эксклюзивными внедорожниками, чтобы насладиться комфортом и эстетикой этих превосходных машин.</p>
             <p>Благодаря услугам аренды, каждый желающий может ощутить себя владельцем такого автомобиля на несколько дней или даже на несколько часов, без необходимости покупки и обслуживания.</p>
@@ -329,22 +304,22 @@
             <div class="autopark">
                 <p>АВТОПАРК</p>
                 <ul class="dropdown">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Условия</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
             
             <div class="events">
                 <p>МЕРОПРИЯТИЕ</p>
                 <ul class="dropdown">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Условия</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
             
@@ -354,6 +329,3 @@
     </footer>
 </body>
 </html>
-
-
-<!--placeholder - пример-->
