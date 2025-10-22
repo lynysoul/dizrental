@@ -7,16 +7,24 @@
 </head>
 <body>
     <header>
-        <img src="#" alt="">
-        <nav>
-            <button aria-label="Автомобили"><img src="#" alt="car"></button>
-            <button aria-label="Профиль"><img src="#" alt="profile"></button>
-            <button aria-label="Меню"><img src="#" alt="menu"></button>
-        </nav>
+        <a href="#"><img src="#" alt="logo" class="logo"></a>
+
+        <a href="#"><img src="#" alt="car"></a>
+        <a href="#"><img src="#" alt="profile"></a>
+        <a href="#"><img src="#" alt="menu"></a>
+        
+        <ul class="menu">
+            <li>Подобрать авто</li>
+            <li>Условия</li>
+            <li>Цены</li>
+            <li>О нас</li>
+            <li>Контакты</li>
+        </ul>
+
     </header>
     <main>
         <section class="first">
-            <h1>Аренда авто в Москве</h1>
+            <h2>Аренда авто в Москве</h2>
             <p>Прокат или аренда автомобиля с водителем и без</p>
             <hr>
             <ol class="bonuses">
@@ -64,11 +72,11 @@
             <h2>Наш автопарк</h2>
             <button>Смотреть все</button>
             <ul>
-                <li><button>Внедорожники</button></li>
-                <li><button>Бизнес</button></li>
-                <li><button>Спорткар</button></li>
-                <li><button>Премиум</button></li>
-                <li><button>Комфорт</button></li>
+                <li><button><img src="#" alt="SUV">Внедорожники</button></li>
+                <li><button><img src="#" alt="business">Бизнес</button></li>
+                <li><button><img src="#" alt="sportcar">Спорткар</button></li>
+                <li><button><img src="#" alt="premium">Премиум</button></li>
+                <li><button><img src="#" alt="comfort">Комфорт</button></li>
             </ul>
 
             <article>
@@ -122,13 +130,11 @@
                 <button>Забронировать</button>
                 <p>от 7150 руб/сут.</p>
             </article>
-        </section>
-
-        <section class="Moscow-desc">
-            <h2>Москва известна своими величественными аллеями, роскошными торговыми центрами и впечатляющей архитектурой. В таком окружении неудивительно, что спрос на аренду элитных автомобилей в Москве растет с каждым годом. </h2>
+        
+            <p>Москва известна своими величественными аллеями, роскошными торговыми центрами и впечатляющей архитектурой. В таком окружении неудивительно, что спрос на аренду элитных автомобилей в Москве растет с каждым годом. </p>
             <p>Эти роскошные автомобили стали неотъемлемой частью жизни успешных бизнесменов, звезд шоу-бизнеса и просто людей, стремящихся испытать неповторимые ощущения от комфорта и мощи.</p>
         </section>
-            
+
         <section class="rentalform">
             <h2>Арендовать авто прямо сейчас!</h2>
             <form>
@@ -276,6 +282,7 @@
     
     <footer>
         <img src="#" alt="logo">
+        <h2 style="display: none">Контакты</h2>
         <p>+7 (499) 110-20-47</p>
         <p>Рабочие часы: с 10:00 до 20:00</p>
         <button>Заказать звонок</button>
@@ -289,7 +296,7 @@
         </nav>
         <nav class="dropdowns">
             <div class="for-clients">
-                <p>КЛИЕНТАМ</p>
+                <h3>КЛИЕНТАМ</h3>
                 <ul>
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
@@ -300,7 +307,7 @@
             </div>
             
             <div class="autopark">
-                <p>АВТОПАРК</p>
+                <h3>АВТОПАРК</h3>
                 <ul class="dropdown">
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
@@ -311,7 +318,7 @@
             </div>
             
             <div class="events">
-                <p>МЕРОПРИЯТИЕ</p>
+                <h3>МЕРОПРИЯТИЕ</h3>
                 <ul class="dropdown">
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
