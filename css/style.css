@@ -1,0 +1,550 @@
+/* unbounded-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/unbounded-v12-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v49-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/montserrat-v31-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 22px 17px 20px;
+}
+
+.menu {
+
+}
+
+
+hr {
+    border: 0px;
+    height: 0.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5; 
+    width: auto;
+    overflow-x: hidden;
+}
+
+:root {
+    --custom-property:__;
+    font-size: 62.5%;
+}
+
+h1, h2, h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700; 
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 18px;
+    padding-top: 40px;
+    margin: 0;
+    line-height: 27px;
+}
+
+section {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px 0 20px;
+}
+
+.first {
+    padding: 40px 20px 40px 20px;
+    min-height: 352px;
+    color: white;
+}
+
+.first p {
+    color: white;
+    font-weight:400;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.bonuses {
+    display: block;
+    font-weight: 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 40px;
+}
+
+.bonuses li {
+    display: inline-block;
+    white-space: normal;
+}
+
+#b_1 {
+    display: inline-block;
+    width: 219px;
+}
+
+#b_2 {
+    display: inline-block;
+    width: 204px;
+}
+
+#b_3 {
+    display: inline-block;
+    width: 188px;
+}
+
+#b_4 {
+    display: inline-block;
+    width: 145px;
+}
+
+#b_5 {
+    display: inline-block;
+    width: 159px;
+}
+
+.first-scroll li {
+    min-width: 145px;
+}
+
+.first {
+    height: 352px;
+    background-image: url("../Images/s1_car_back.png")
+}
+
+.rent {
+    min-height: 545px;
+    background-color: white;
+}
+
+.rent-date {
+    height: 76px;
+    width: 280px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.checkbox-cartype {
+    list-style: none;
+    display: block;
+    font-weight: 14px;
+    padding: 0;
+    margin: 20px;
+}
+
+.checkbox-cartype li {
+    display: inline-block;
+    width: 81.25%;
+}
+
+.variants {
+    height: 76px;
+    width: 87.5vw;
+    margin: 20px 0 20px 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #9f7437, #e3d293);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.autopark {
+    min-height: 2226px;
+    background-color: #f4f4f4;
+    background-size: cover;
+}
+
+.view-all {
+    width: auto;
+    height: 44px;
+    border: 2px;
+    border-radius: 8px;
+    border-color: black;
+}
+
+.autopark-li {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.autopark-li li{
+    list-style: none;
+    display: block;
+    margin: 14px;
+}
+
+.autopark-li img {
+    margin: 14px;
+    font-size: 13px;
+}
+
+#SUVbtn {
+    background: black;
+}
+
+.autopark-cars {
+    height: 64px;
+    border: none;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.checkbox-cartype {
+    display: inline-block;
+    height: 64px;
+    border-radius: 10px;
+    border: none;
+}
+
+.car-page {
+    width: 87.5vw;
+    min-height: 391px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 16px 30px 30px;
+    margin: 14px 0 0 0;
+}
+
+.car-page h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    text-align: right;
+}
+
+.instock {
+    display: inline-block;
+    text-align: right;
+}
+
+.instock p {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6.75px 10px;
+    background: #f0f0f0;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    margin: 0;
+    font-size: 9px;
+    margin-right: 6px;
+}
+
+.instock img {
+    vertical-align: middle;
+}
+
+#Moscow-alley {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 40px 0 20px 0;
+}
+
+#Luxury-cars {
+    color: #9f9f9f;
+    font-weight: 500px;
+    padding-bottom: 40px;
+    font-size: 14px;
+    font-weight: medium;
+}
+
+.book {
+    width: 68.75vw;
+    min-height: 40px;
+    background: linear-gradient(to right, #9f7437, #e3d293);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px; /*24-16 (text height difference) */
+}
+
+#view-all {
+    width: 124px;
+    height: 44px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.car-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 32px 0 20px 0;
+}
+
+.specs {
+    display: inline-block;
+    padding: 0 0 26px 0;
+    margin: 0;
+}
+
+.specs img, p {
+    display: inline-block; /* все элементы внутри будут стоять в ряд */
+    vertical-align: middle; /* выравнивание по вертикали */
+    font-size: 12px;
+    font-weight: bold;
+    color: #707070;
+    margin: 0 10px 0 0;
+}
+
+
+
+#DizrentalinMoscow {
+    font-size: 18px;
+    color: white;
+}
+
+.rentalform {
+    min-height: 934px;
+    background-image: url("../Images/rental_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.typeform {
+    width: 87.5vw;
+    height: 76px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    padding: 28px 0 28px 30px;
+    margin: 7px 0 7px 0;
+}
+
+.rentalform h2 {
+    margin-bottom: 23px;
+}
+
+#rentbutton {
+    width: 87.5vw;
+    height: 76px;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 28px 0 28px 30px;
+    margin: 7px 0 7px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.threesteps {
+    min-height: 950px;
+    background: #f4f4f4;
+    padding: 0 20px 40px 20px;
+}
+
+
+#threesteps {
+    margin-bottom: 30px;
+}
+
+.step {
+    width: 87.5vw;
+    min-height: 266px;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 14px 0 0 0;
+}
+
+.step p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.step h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.steph {
+    margin: 26px 0 14px 0;
+}
+
+.rightnow {
+    min-height: 1048px;
+    background-color: #121212;
+    padding: 0 20px 40px 20px;
+}
+
+.rightnow h2 {
+    color: white;
+    text-align: left;
+    margin-right: 72px;
+}
+
+.rightnow ol {
+    padding: 0;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.rightnow p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color:
+}
+
+.discount {
+    background: white;
+    border-radius: 20px;
+    border: none;
+}
+
+.discount p {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 30px 30px 30px;
+}
+
+#eliterental {
+    font-size: 18px;
+    color: white;
+    margin: 30px 0 20px 0;
+}
+
+.discount h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: 30px 30px 14px 30px;
+}
+
+.reasons {
+    min-height: 957px;
+    background: #f4f4f4;
+}
+
+.reasons h2 {
+    margin-bottom: 29px;
+}
+
+.reasons h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reasons p {
+    color: #9f9f9f;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reason {
+    display: inline-block;
+    margin-bottom: 35px;
+    vertical-align: top;
+}
+
+.reason img {
+
+}
+
+.Dubai {
+    min-height: 1566px;
+    background-color: #121212;
+    color: white;
+}
+
+.Dubai img {
+    margin: 32px 0 30px 0;
+}
+
+#guarantee {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#Moscow {
+    margin: 40px 0 30px 0;
+}
+
+.bottomdubai {
+
+}
+
+.cartype {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+/* ШРИФТЫ: 
+заголовки - unbounded
+обычный текст - pp pangram sans
+
+
+/* <link rel="preload" as="font" type="font/truetype" href="fonts/unbounded-v12-cyrillic_latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="fonts/roboto-v49-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/style.css">*/

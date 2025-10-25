@@ -3,11 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="font" type="font/truetype" href="fonts/unbounded-v12-cyrillic_latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="fonts/roboto-v49-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Dizrental</title>
 </head>
 <body>
     <header>
-        <a href="#"><img src="#" alt="logo" class="logo"></a>
+        <a href="#"><img src="..\Images\logo.png" alt="logo" class="logo"></a>
 
         <a href="#"><img src="#" alt="car"></a>
         <a href="#"><img src="#" alt="profile"></a>
@@ -24,15 +28,16 @@
     </header>
     <main>
         <section class="first">
-            <h2>Аренда авто в Москве</h2>
+            <h1>Аренда авто в Москве</h1>
+            <!--<h2 class="sr-only">Аренда авто в Москве</h2>-->
             <p>Прокат или аренда автомобиля с водителем и без</p>
             <hr>
             <ol class="bonuses">
-                <li>Большой парк автомобилей в наличии</li>
-                <li>Доставка авто до вашей геолокации</li>
-                <li>Скидки постоянным клиентам</li>
-                <li>Любая форма оплаты</li>
-                <li>Выгодные цены</li>
+                <li id="b_1">Большой парк автомобилей в наличии</li>
+                <li id="b_2">Доставка авто до вашей геолокации</li>
+                <li id="b_3">Скидки постоянным клиентам</li>
+                <li id="b_4">Любая форма оплаты</li>
+                <li id="b_5">Выгодные цены</li>
             </ol>
         </section>
 
@@ -40,7 +45,7 @@
             <h2>Заказать аренду online</h2>
 
             <label for="start-rent">Начало аренды</label>
-            <input type="date" id="start-rent" class="rent-date">
+            <input type="date" placeholder="Начало Аренды" id="start-rent" class="rent-date">
 
             <label for="end-rent">Завершение аренды</label>
             <input type="date" id="end-rent" class="rent-date">
@@ -70,100 +75,127 @@
 
         <section class="autopark">
             <h2>Наш автопарк</h2>
-            <button>Смотреть все</button>
-            <ul>
-                <li><button><img src="#" alt="SUV">Внедорожники</button></li>
-                <li><button><img src="#" alt="business">Бизнес</button></li>
-                <li><button><img src="#" alt="sportcar">Спорткар</button></li>
-                <li><button><img src="#" alt="premium">Премиум</button></li>
-                <li><button><img src="#" alt="comfort">Комфорт</button></li>
+            <button id="view-all">Смотреть все</button>
+            <ul class="autopark-li">
+                <li><button id="SUVbtn" class="autopark-cars"><img src="../Images/SUV.svg" alt="SUV">Внедорожники</button></li>
+                <li><button class="autopark-cars"><img src="../Images/business-car.svg" alt="business">Бизнес</button></li>
+                <li><button class="autopark-cars"><img src="../Images/sportcar.svg" alt="sportcar">Спорткар</button></li>
+                <li><button class="autopark-cars"><img src="../Images/premiumcar.svg" alt="premium">Премиум</button></li>
+                <li><button class="autopark-cars"><img src="../Images/comfortcar.svg" alt="comfort">Комфорт</button></li>
             </ul>
 
-            <article>
-                <p>Москва</p>
-                <img src="#" alt="checkmark">
-                <img src="#" alt="2021 Mazda 6">
-                <h3>2021 Mazda 6, 2021</h3>
-                <img src="#" alt="engine">
-                <p>2,3л/бензин</p>
-                <img src="#" alt="horse-power">
-                <p>317 л.с.</p>
-                <button>Забронировать</button>
-                <p>от 7150 руб/сут.</p>
+            <article class="car-page">
+                <div class="wrapper">
+                    <div class="instock">
+                        <p>МОСКВА</p>
+                        <img src="..\Images\checkmark.svg" alt="checkmark"> 
+                    </div>
+                </div>
+                <img src="..\Images\2021_Mazda_6_black.jpg" alt="2021 Mazda 6">
+                <h3 class="car-name">2021 Mazda 6, 2021</h3>
+                <div class="specs">
+                    <img src="..\Images\engine.svg" alt="engine">
+                    <p>2,3л/бензин</p>
+                    <img src="..\Images\horse_power.svg" alt="horse-power">
+                    <p>317 л.с.</p>
+                </div>
+                <button class="book">Забронировать</button>
+                <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
+            </article>
             </article>
 
-            <article>
-                <p>Москва</p>
-                <img src="#" alt="checkmark">
-                <img src="#" alt="Kia Sportage 2022">
-                <h3>Kia Sportage, 2022</h3>
-                <img src="#" alt="engine">
-                <p>2,3л/бензин</p>
-                <img src="#" alt="horse-power">
-                <p>317 л.с.</p>
-                <button>Забронировать</button>
-                <p>от 7150 руб/сут.</p>
+            <article class="car-page">
+                <div class="wrapper">
+                    <div class="instock">
+                        <p>МОСКВА</p>
+                        <img src="..\Images\checkmark.svg" alt="checkmark"> 
+                    </div>
+                </div>
+                <img src="..\Images\2022_Kia_Sportage_white.jpg" alt="Kia Sportage 2022">
+                <h3 class="car-name">Kia Sportage, 2022</h3>
+                <div class="specs">
+                    <img src="..\Images\engine.svg" alt="engine">
+                    <p>2,3л/бензин</p>
+                    <img src="..\Images\horse_power.svg" alt="horse-power">
+                    <p>317 л.с.</p>
+                </div>
+                <button class="book">Забронировать</button>
+                <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
+            </article>
             </article>
 
-            <article>
-                <p>Москва</p>
-                <img src="#" alt="checkmark">
-                <img src="#" alt="2018 Lexus IS">
-                <h3>Lexus IS, 2018</h3>
-                <img src="#" alt="engine">
-                <p>2,3л/бензин</p>
-                <img src="#" alt="horse-power">
-                <p>317 л.с.</p>
-                <button>Забронировать</button>
-                <p>от 7150 руб/сут.</p>
+            <article class="car-page">
+                <div class="wrapper">
+                    <div class="instock">
+                        <p>МОСКВА</p>
+                        <img src="..\Images\checkmark.svg" alt="checkmark"> 
+                    </div>
+                </div>
+                <img src="..\Images\2018_Lexus_IS_grey.jpg" alt="2018 Lexus IS">
+                <h3 class="car-name">Lexus IS, 2018</h3>
+                <div class="specs">
+                    <img src="..\Images\engine.svg" alt="engine">
+                    <p>2,3л/бензин</p>
+                    <img src="..\Images\horse_power.svg" alt="horse-power">
+                    <p>317 л.с.</p>
+                </div>
+                <button class="book">Забронировать</button>
+                <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
+            </article>
             </article>
 
-            <article>
-                <p>Москва</p>
-                <img src="#" alt="checkmark">
-                <img src="#" alt="2021 Mazda 6">
-                <h3>2021 Mazda 6, 2021</h3>
-                <img src="#" alt="engine">
-                <p>2,3л/бензин</p>
-                <img src="#" alt="horse-power">
-                <p>317 л.с.</p>
-                <button>Забронировать</button>
-                <p>от 7150 руб/сут.</p>
+            <article class="car-page">
+                <div class="wrapper">
+                    <div class="instock">
+                        <p>МОСКВА</p>
+                        <img src="..\Images\checkmark.svg" alt="checkmark"> 
+                    </div>
+                </div>
+                <img src="..\Images\2018_Lexus_IS_white.jpg" alt="2021 Mazda 6">
+                <h3 class="car-name">2021 Mazda 6, 2021</h3>
+                <div class="specs">
+                    <img src="..\Images\engine.svg" alt="engine">
+                    <p>2,3л/бензин</p>
+                    <img src="..\Images\horse_power.svg" alt="horse-power">
+                    <p>317 л.с.</p>
+                </div>
+                <button class="book">Забронировать</button>
+                <p class="price">от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
             </article>
         
-            <p>Москва известна своими величественными аллеями, роскошными торговыми центрами и впечатляющей архитектурой. В таком окружении неудивительно, что спрос на аренду элитных автомобилей в Москве растет с каждым годом. </p>
-            <p>Эти роскошные автомобили стали неотъемлемой частью жизни успешных бизнесменов, звезд шоу-бизнеса и просто людей, стремящихся испытать неповторимые ощущения от комфорта и мощи.</p>
+            <p id="Moscow-alley">Москва известна своими величественными аллеями, роскошными торговыми центрами и впечатляющей архитектурой. В таком окружении неудивительно, что спрос на аренду элитных автомобилей в Москве растет с каждым годом. </p>
+            <p id="Luxury-cars">Эти роскошные автомобили стали неотъемлемой частью жизни успешных бизнесменов, звезд шоу-бизнеса и просто людей, стремящихся испытать неповторимые ощущения от комфорта и мощи.</p>
         </section>
 
         <section class="rentalform">
             <h2>Арендовать авто прямо сейчас!</h2>
             <form>
-                <input type="text" placeholder="Имя" name="Name">
-                <input type="tel" placeholder="+7 (916) 123-45-67" name="Phone">
+                <input type="text" placeholder="Имя" name="Name" class="typeform">
+                <input type="tel" placeholder="+7 (916) 123-45-67" name="Phone" class="typeform">
 
-                <button type="submit">Забронировать</button>
+                <button type="submit" id="rentbutton">Забронировать</button>
 
                 <input type="checkbox" id="checkbox-agreement" required>
                 <label for="checkbox-agreement">Отправляя форму, я соглашаюсь с <a href="#">политикой обработки персональных данных</a></label>
             </form>
-            <p>Dizrental в Москве предлагает широкий выбор моделей от ведущих производителей, таких как Mercedes, BMW, Audi . Клиенты могут выбирать между спортивными автомобилями, роскошными седанами или эксклюзивными внедорожниками, чтобы насладиться комфортом и эстетикой этих превосходных машин.</p>
+            <p id="DizrentalinMoscow">Dizrental в Москве предлагает широкий выбор моделей от ведущих производителей, таких как Mercedes, BMW, Audi . Клиенты могут выбирать между спортивными автомобилями, роскошными седанами или эксклюзивными внедорожниками, чтобы насладиться комфортом и эстетикой этих превосходных машин.</p>
             <p>Благодаря услугам аренды, каждый желающий может ощутить себя владельцем такого автомобиля на несколько дней или даже на несколько часов, без необходимости покупки и обслуживания.</p>
         </section>
 
         <section class="threesteps">
-            <h2>3 шага, чтобы арендовать авто</h2>
+            <h2 id="threesteps">3 шага, чтобы арендовать авто</h2>
             <div class="step">
-                <img src="#" alt="operator">
+                <img src="..\Images\operator.svg" alt="operator">
                 <h3>Подать заявку</h3>
                 <p>Оформляете заявку на сайте, связываетесь по телефону или в мессенджерах и бронируете автомобиль</p>
             </div>
             <div class="step">
-                <img src="#" alt="agreement">
+                <img src="..\Images\agreement.svg" alt="agreement">
                 <h3>Договор</h3>
                 <p>Подписываете договор на аренду автомобиля, вносите оплату и страховой депозит</p>
             </div>
             <div class="step">
-                <img src="#" alt="keys">
+                <img src="..\Images\keys.svg" alt="keys">
                 <h3>Получение</h3>
                 <p>Забираете авто в <b>нашем салоне</b> или мы можем <b>доставить в любую точку Москвы</b></p>
             </div>
@@ -174,36 +206,36 @@
             <ol>
                 <li>
                     <div class="discount">
-                        <img src="#" alt="car-above">
-                        <p>Скидки постоянным клиентам</p>
+                        <img src="../Images/car-above.png" alt="car-above">
+                        <h3>Скидки постоянным клиентам</h3>
                         <p>Постоянным клиентам мы предоставляем скидки до 30% при повторной аренде.</p>
                     </div>
                 </li>
                 <li>
                     <div class="discount">
-                        <img src="#" alt="car-above">
-                        <p>Скидки постоянным клиентам</p>
+                        <img src="../Images/car-above.png" alt="car-above">
+                        <h3>Скидки постоянным клиентам</h3>
                         <p>Постоянным клиентам мы предоставляем скидки до 30% при повторной аренде.</p>
                     </div>
                 </li>
                 <li>
                     <div class="discount">
-                        <img src="#" alt="car-above">
-                        <p>Скидки постоянным клиентам</p>
+                        <img src="../Images/car-above.png" alt="car-above">
+                        <h3>Скидки постоянным клиентам</h3>
                         <p>Постоянным клиентам мы предоставляем скидки до 30% при повторной аренде.</p>
                     </div>
                 </li>
                 <li>
                     <div class="discount">
-                        <img src="#" alt="car-above">
-                        <p>Скидки постоянным клиентам</p>
+                        <img src="../Images/car-above.png" alt="car-above">
+                        <h3>Скидки постоянным клиентам</h3>
                         <p>Постоянным клиентам мы предоставляем скидки до 30% при повторной аренде.</p>
                     </div>
                 </li>
                 <li>
                     <div class="discount">
-                        <img src="#" alt="car-above">
-                        <p>Скидки постоянным клиентам</p>
+                        <img src="../Images/car-above.png" alt="car-above">
+                        <h3>Скидки постоянным клиентам</h3>
                         <p>Постоянным клиентам мы предоставляем скидки до 30% при повторной аренде.</p>
                     </div>
                 </li>
@@ -213,39 +245,39 @@
             <button><img src="#" alt="forward"></button>
             <p>1/5</p>
             
-            <p>Аренда элитных автомобилей в Москве предоставляет возможность воплотить мечты в реальность и создать незабываемые впечатления. Будь то эксклюзивная свадьба, впечатляющий деловой приезд или просто желание испытать роскошь и элегантность автомобиля премиум-класса, эта услуга открывает двери в мир высокого стиля и комфорта.</p>
+            <p id="eliterental">Аренда элитных автомобилей в Москве предоставляет возможность воплотить мечты в реальность и создать незабываемые впечатления. Будь то эксклюзивная свадьба, впечатляющий деловой приезд или просто желание испытать роскошь и элегантность автомобиля премиум-класса, эта услуга открывает двери в мир высокого стиля и комфорта.</p>
             <p>Аренда элитных автомобилей в Москве - это возможность позволить себе немного роскоши и создать незабываемые моменты, которые останутся в памяти надолго.</p>
         </section>
 
         <section class="reasons">
             <h2>6 причин заказать аренду авто в DizRental услуги</h2>
             <div class="reason">
-                <img src="#" alt="insurance">
+                <img src="../Images/insurance.svg" alt="insurance">
                 <h3>Страховка</h3>
                 <p>Все наши автомобили застрахованы по ОСАГО И КАСКО</p>
             </div>
             <div class="reason">
-                <img src="#" alt="qr-code">
+                <img src="../Images/qr-code.svg" alt="qr-code">
                 <h3>Ценовая политика</h3>
                 <p>Всегда доступные цены и приятные бонусы постоянным клиентам</p>
             </div>
             <div class="reason">
-                <img src="#" alt="payment">
+                <img src="../Images/money.svg" alt="payment">
                 <h3>Оплата</h3>
                 <p>Любая удобная для вас форма оплаты (нал/безнал, банковский перевод)</p>
             </div>
             <div class="reason">
-                <img src="#" alt="qr-code">
+                <img src="../Images/qr-code.svg" alt="qr-code">
                 <h3>Ценовая политика</h3>
                 <p>Всегда доступные цены и приятные бонусы постоянным клиентам</p>
             </div>
             <div class="reason">
-                <img src="#" alt="wheel">
+                <img src="../Images/wheel.svg" alt="wheel">
                 <h3>Автопарк</h3>
                 <p>Весь автопарк в отличном состоянии и всегда пополняется новыми моделями</p>
             </div>
             <div class="reason">
-                <img src="#" alt="speed">
+                <img src="../Images/speed.svg" alt="speed">
                 <h3>Скорость</h3>
                 <p>Оформление аренды любого авто в течении не более 15 минут</p>
             </div>
@@ -253,30 +285,33 @@
 
         <section class="Dubai">
             <h2>Car hire in Dubai for different budget</h2>
-            <img src="#" alt="Porshe-911">
-            <p>We guarantee that you get technically sound, clean car with a full tank, comfortable interior. Our staff will independently pick up the car at the expiration of the rental term at the specified location.</p>
+            <img src="../Images/Porshe_911.png" alt="Porshe-911">
+            <p id="guarantee">We guarantee that you get technically sound, clean car with a full tank, comfortable interior. Our staff will independently pick up the car at the expiration of the rental term at the specified location.</p>
             <p>We strive to make car rental in Dubai affordable for everyone. That's why you can rent cars in our office: Economy. Sedans and SUVs you can rent from 149 AED ($40) per day.Comfort. Sports cars, vans, SUVs, sedans with comfortable saloon can be rented from 219 AED ($59) per day.Premium. Premium SUVs and prestigious convertibles can be rent from AED 439 ($119) per day.</p>
-        </section>
 
-        <section class="Moscow">
-            <h2>Аренда машин в Москве</h2>
-            <img src="#" alt="interior">
+            <h2  id="Moscow">Аренда машин в Москве</h2>
+            <img src="../Images/Car_interior.png" alt="interior">
             <p>Для получения более подробной информации о прокате авто можно посетить наш офис, оставить заявку на сайте или позвонить по телефону 7 (499) 110-20-47</p>
             <p>Мы всегда рады помочь вам по любым вопросам и обеспечить качественным авто.</p>
             
-            <div>
-                <img src="#" alt="eight">
+            <hr>
+            
+            <div class="bottomdubai">
+                <img src="../Images/8.svg" alt="eight">
                 <p>Более 8 лет на рынке проката авто</p>
             </div>
-            <div>
-                <img src="#" alt="twenty-four">
+            <div class="bottomdubai">
+                <img src="../Images/24.svg" alt="twenty-four">
                 <p>>24  премиальных и эксклюзивных моделей</p>
             </div>
-            <div>
+            <div class="bottomdubai">
                 <img src="#" alt="car">
                 <p>Автопарк стоимостью более 250 млн. рублей</p>
             </div>
         </section>
+
+            
+        
 
     </main>
     
