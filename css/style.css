@@ -49,24 +49,106 @@
   src: url('../fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-header {
-    height: 70px;
-    width: 100%;
-    background-color: #181818;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 22px 17px 20px;
+:root {
+    --custom-property:__;
+    --black-1: #1f1f1f;
+    --black-2: #181818;
+    --black-3: #0A0A0A;
+    --black-4: rgba(31, 31, 31, 1);
+    --black-5:  #121212;
+    --black-6: #1d1d1d;
+    --black-7: #141414;
+    --gold-1: #9F7437;
+    --gold-2: #E3D293;
+    --gray-1: #727272;
+    --gray-2: #707070;
+    --gray-3: #9f9f9f;
+    --gray-4: #b6b6b6;
+    --gray-5: #afafaf;
+    --white: #ffffff;
+    --white-1: #f5f5f5;
+    --white-2: #eeeeee;
+    --white-3: #f4f4f4;
+    --white-4: #f0f0f0;
+    --white-02: rgba(255, 255, 255, 0.2);
+
+    --radius-large: 10px;
+    --radius-medium: 8px;
+    --radius-small: 6px;
 }
 
-.menu {
+html { font-size: 62.5%; }
 
+p, li, input, button, a {
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 hr {
+    color: rgba(var(--white, 0.2));
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: var(--black-2);
+    display: inline-block;
+    justify-content: space-between;
+    padding: 15px 22px 17px 20px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.hbuttons {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hbuttons a, .hbuttons button {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#menu-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    margin: 0 0 0 19px;
+    padding: 0;
+}
+
+header ul {
+    display: none;
+    background: var(--black-2);
+    margin: 13px -22px 0 0;
+    padding: 10px 20px;
+    position: absolute;
+    left: 35vw;
+    right: 0;
+    z-index: 1000;
+    list-style: none;
+    text-align: right;
+}
+
+header ul li{
+    margin: 5px 22px 5px 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+hr {
     border: 0px;
     height: 0.2rem;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--white--02);
 }
 
 body {
@@ -74,11 +156,6 @@ body {
     line-height: 1.5; 
     width: auto;
     overflow-x: hidden;
-}
-
-:root {
-    --custom-property:__;
-    font-size: 62.5%;
 }
 
 h1, h2, h3 {
@@ -99,6 +176,11 @@ h2 {
     line-height: 27px;
 }
 
+body p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 section {
     width: 100%;
     background-size: cover;
@@ -109,25 +191,27 @@ section {
 .first {
     padding: 40px 20px 40px 20px;
     min-height: 352px;
-    color: white;
+    color: var(--white);
+    height: 352px;
+    background-image: url("../Images/s1_car_back.png")
 }
 
 .first p {
-    color: white;
+    color: var(--white);
     font-weight:400;
     font-size: 16px;
     margin-top: 20px;
     margin-bottom: 40px;
     line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
 } 
 
 .bonuses {
     display: block;
-    font-weight: 15px;
+    font-size: 15px;
     white-space: nowrap;
     overflow-x: auto;
     margin-top: 40px;
+    list-style: none;
 }
 
 .bonuses li {
@@ -135,27 +219,28 @@ section {
     white-space: normal;
 }
 
-#b_1 {
+.bonuses li :nth-child(1) {
     display: inline-block;
     width: 219px;
+    background: var(--black);
 }
 
-#b_2 {
+.bonuses li :nth-child(2) {
     display: inline-block;
     width: 204px;
 }
 
-#b_3 {
+.bonuses li :nth-child(3) {
     display: inline-block;
     width: 188px;
 }
 
-#b_4 {
+.bonuses li :nth-child(4) {
     display: inline-block;
     width: 145px;
 }
 
-#b_5 {
+.bonuses li :nth-child(5) {
     display: inline-block;
     width: 159px;
 }
@@ -164,62 +249,86 @@ section {
     min-width: 145px;
 }
 
-.first {
-    height: 352px;
-    background-image: url("../Images/s1_car_back.png")
-}
-
 .rent {
     min-height: 545px;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .rent-date {
     height: 76px;
     width: 280px;
     border: none;
-    border-radius: 10px;
-    background-color: #f5f5f5;
+    border-radius: var(--radius-large);
+    background-color: var(--white-1);
 }
 
 .checkbox-cartype {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     list-style: none;
-    display: block;
-    font-weight: 14px;
     padding: 0;
-    margin: 20px;
+    font-size: 14px;
 }
 
 .checkbox-cartype li {
+    flex: 0 0 calc(50% - 5px);
+    box-sizing: border-box;
+}
+
+.cartype {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--white-2) !important;
+    border-radius: 5px;
+    margin-right: 14px;
     display: inline-block;
-    width: 81.25%;
+    vertical-align: middle;
 }
 
 .variants {
     height: 76px;
     width: 87.5vw;
     margin: 20px 0 20px 0;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     border: none;
-    background: linear-gradient(to right, #9f7437, #e3d293);
+    background: linear-gradient(to right, var(--gold-1), var(--gold-2));
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: var(--white);
     margin-bottom: 40px;
 }
 
 .autopark {
     min-height: 2226px;
-    background-color: #f4f4f4;
+    background-color: var(--white-3);
     background-size: cover;
+    padding-top: 40px;
 }
 
-.view-all {
+.our-autopark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 17px;
+}
+
+.autopark h2 {
+    width: auto;
+    padding-top: 0;
+}
+
+#view-all {
     width: auto;
     height: 44px;
     border: 2px;
     border-radius: 8px;
-    border-color: black;
+    border-color: var(--black);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .autopark-li {
@@ -227,50 +336,55 @@ section {
     display: block;
     padding: 0;
     margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.autopark li p {
+    font-weight: 700;
 }
 
 .autopark-li li{
-    list-style: none;
-    display: block;
-    margin: 14px;
+    display: inline-block;
+    margin-right: 14px;
+    white-space: normal;
 }
 
 .autopark-li img {
-    margin: 14px;
+    margin-right: 14px;
     font-size: 13px;
 }
 
 #SUVbtn {
-    background: black;
+    background: var(--black);
+    color: var(--white);
 }
 
 .autopark-cars {
-    height: 64px;
-    border: none;
-    border-radius: 10px;
-    padding: 22px;
-}
-
-.checkbox-cartype {
     display: inline-block;
     height: 64px;
-    border-radius: 10px;
     border: none;
+    border-radius: var(--radius-large);
+    padding: 22px;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 13px;
 }
 
 .car-page {
     width: 87.5vw;
     min-height: 391px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     padding: 16px 16px 30px 30px;
     margin: 14px 0 0 0;
 }
 
-.car-page h3 {
-    font-family: 'Montserrat', sans-serif;
+.car-page img {
+    margin-top: 7px;
 }
 
 .wrapper {
@@ -286,10 +400,11 @@ section {
     display: inline-block;
     vertical-align: middle;
     padding: 6.75px 10px;
-    background: #f0f0f0;
-    color: black;
+    background: var(--white-4);
+    color: var(--black);
+    font-weight: bold;
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius-small);
     margin: 0;
     font-size: 9px;
     margin-right: 6px;
@@ -302,12 +417,12 @@ section {
 #Moscow-alley {
     font-size: 18px;
     font-weight: 600;
-    color: black;
+    color: var(--black);
     margin: 40px 0 20px 0;
 }
 
 #Luxury-cars {
-    color: #9f9f9f;
+    color: var(--gray-3);
     font-weight: 500px;
     padding-bottom: 40px;
     font-size: 14px;
@@ -317,20 +432,20 @@ section {
 .book {
     width: 68.75vw;
     min-height: 40px;
-    background: linear-gradient(to right, #9f7437, #e3d293);
-    color: white;
+    background: linear-gradient(to right, var(--gold-1), var(--gold-2));
+    color: var(--white);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius-small);
     font-size: 12px;
     font-weight: bold;
-    margin-bottom: 8px; /*24-16 (text height difference) */
+    margin-bottom: 8px;
 }
 
 #view-all {
     width: 124px;
     height: 44px;
-    border: 2px solid black;
-    border-radius: 8px;
+    border: 2px solid var(--black);
+    border-radius: var(--radius-medium);
 }
 
 .car-name {
@@ -346,19 +461,18 @@ section {
 }
 
 .specs img, p {
-    display: inline-block; /* все элементы внутри будут стоять в ряд */
-    vertical-align: middle; /* выравнивание по вертикали */
+    display: inline-block;
+    vertical-align: middle;
     font-size: 12px;
     font-weight: bold;
-    color: #707070;
+    color: var(--gray-2);
     margin: 0 10px 0 0;
 }
 
-
-
 #DizrentalinMoscow {
     font-size: 18px;
-    color: white;
+    color: var(--white);
+    margin-bottom: 20px;
 }
 
 .rentalform {
@@ -366,38 +480,72 @@ section {
     background-image: url("../Images/rental_bg.png");
     background-size: cover;
     background-position: center;
+    padding-bottom: 20px;
 }
 
 .typeform {
     width: 87.5vw;
     height: 76px;
-    background: #f5f5f5;
+    background: var(--white-1);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     padding: 28px 0 28px 30px;
     margin: 7px 0 7px 0;
 }
 
 .rentalform h2 {
-    margin-bottom: 23px;
+    margin: 0 20px 23px 0;
+    color: var(--white);
+}
+
+.rentalform p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
 }
 
 #rentbutton {
     width: 87.5vw;
     height: 76px;
     background: none;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 28px 0 28px 30px;
+    border: 2px solid var(--white);
+    border-radius: var(--radius-large);
+    text-align: center;
+    padding: 28px 34px 28px 34px;
     margin: 7px 0 7px 0;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-size: 16px;
 }
 
+.policy {
+    margin: 29px 14px 30px 0;
+    color: var(--gray-4);
+}
+
+#hrefpolicy {
+    text-decoration: none;
+    color: var(--white);
+}
+#checkbox-agreement {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border-radius: 5px;
+    border: none;
+}
+
+#checkbox-agreement::after {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-image: url("../Images/check.svg");
+}
+
 .threesteps {
     min-height: 950px;
-    background: #f4f4f4;
+    background: var(--white-3);
     padding: 0 20px 40px 20px;
 }
 
@@ -409,7 +557,7 @@ section {
 .step {
     width: 87.5vw;
     min-height: 266px;
-    background: white;
+    background: var(--white);
     border: none;
     border-radius: 20px;
     padding: 30px;
@@ -420,25 +568,21 @@ section {
     margin: 0;
     font-size: 14px;
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .step h3 {
     font-family: 'Montserrat', sans-serif;
-}
-
-.steph {
-    margin: 26px 0 14px 0;
+    margin-right: 70px;
 }
 
 .rightnow {
     min-height: 1048px;
-    background-color: #121212;
+    background: url("../Images/rightnow-bg.png");
     padding: 0 20px 40px 20px;
 }
 
 .rightnow h2 {
-    color: white;
+    color: var(--white);
     text-align: left;
     margin-right: 72px;
 }
@@ -447,30 +591,49 @@ section {
     padding: 0;
     border-radius: 20px;
     margin-top: 40px;
+    white-space: nowrap;
+}
+
+.rightnow ol li {
+    display: inline-block;   /* Главное свойство */
+    white-space: normal;     /* Разрешаем переносы внутри элемента */
+    vertical-align: top;     /* Выравнивание по верху */
+    width: 280px;           /* Фиксированная ширина */
+    margin-right: 20px;     /* Отступ между элементами */
 }
 
 .rightnow p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
-    color:
+    color: var(--white);
+}
+
+.arrows {
+    background: none;
+    border: none;
+}
+
+#counter {
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .discount {
-    background: white;
+    background: var(--white);
     border-radius: 20px;
     border: none;
 }
 
 .discount p {
-    font-family: 'Roboto', sans-serif;
     margin: 0 30px 30px 30px;
+    color: var(--gray-3);
 }
 
 #eliterental {
     font-size: 18px;
-    color: white;
+    color: var(--white);
     margin: 30px 0 20px 0;
+    font-weight: 500;
 }
 
 .discount h3 {
@@ -480,11 +643,18 @@ section {
 
 .reasons {
     min-height: 957px;
-    background: #f4f4f4;
+    background: var(--white-3);
 }
 
 .reasons h2 {
-    margin-bottom: 29px;
+    margin: 0 30px 29px 0;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 0 auto;
 }
 
 .reasons h3 {
@@ -494,50 +664,215 @@ section {
 }
 
 .reasons p {
-    color: #9f9f9f;
+    color: var(--gray-3);
     font-size: 14px;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .reason {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     margin-bottom: 35px;
     vertical-align: top;
 }
 
-.reason img {
+.reason h3 {
+    margin: 0;
+    font-size: 16px;
+}
 
+.reason img {
+    margin-right: 27px;
+}
+
+.reason p {
+    margin: 12px 0 0 0;
+}
+
+.reason img, .reason p, .reason h3 {
+    display: block; /* Меняем на block */
+    vertical-align: top;
 }
 
 .Dubai {
     min-height: 1566px;
-    background-color: #121212;
-    color: white;
+    background-color: var(--black-5);
+    color: var(--white);
 }
 
 .Dubai img {
-    margin: 32px 0 30px 0;
+    margin: 30px 0 30px 0;
+}
+
+.bottomdubai {
+    display: inline-block;
+}
+
+.bottomdubai img, p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#Moscow {
+    padding: 0;
+    margin: 40px 0 30px 0;
+}
+
+#Moscow-interior {
+    margin-top: 0;
+}
+
+.phone {
+    color: var(--white);
+}
+
+#eight {
+    margin: 0 0 0 14px;
+    gap: 32px;
+}
+
+#twentyfour {
+    margin: 0;
+    gap: 18px;
+}
+
+#morethan {
+    margin: 0 0 0 10px;
+    gap:  28px;
+
 }
 
 #guarantee {
-    color: white;
+    color: var(--white);
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-#Moscow {
-    margin: 40px 0 30px 0;
+.bottomdubai {
+    display: flex;
 }
 
-.bottomdubai {
+.bottomdubai p {
+    /*margin-left: 83px;*/
+    white-space: normal;
+}
 
+.Dubai hr {
+    margin: 30px 0;
+}
+
+.numbers {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
 }
 
 .cartype {
     width: 20px;
     height: 20px;
-    background-color: black;
+    background-color: var(--black);
+}
+
+footer {
+    background: var(--black-6);
+    padding: 40px 20px 0 20px;
+}
+
+#call {
+    width: 87.5vw;
+    height: 56px;
+    background: none;
+    border: 2px solid var(--white);
+    border-radius: var(--radius-medium);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 24px 0 24px 0;
+}
+
+footer h3 {
+    color: var(--white);
+    margin: 40px 0 10px 0;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+.contacts p {
+    display: inline-block;
+    vertical-align: bottom;
+    white-space: normal;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+#mailf {
+    color: var(--white);
+}
+
+.socials {
+    margin: 30px 0 40px 0;
+}
+
+.socials img {
+    margin-right: 12px;
+}
+
+a:-webkit-any-link {
+
+    cursor: pointer;
+    
+    
+}
+
+.dropdowns a {
+    color: var(--gray-5);
+    text-decoration: none;
+}
+
+.dropdowns {
+    background: var(--black-7); /* сделай через отрицательный маргин */
+    background-size: cover;
+    text-align: center;
+    margin: 0 -20px;
+}
+
+.dropdowns li {
+    background: var(--black-6);
+    padding: 10px 0 10px 0;
+}
+
+.dropdowns ul {
+    padding: 0;
+    list-style: none;
+}
+.dropdowns h3 {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+}
+
+#KLIENTAM {
+    margin-top: 20px;
+}
+
+.open {
+    background: none;  /* убрать фон кнопки */
+    border: none;      /* убрать границу */
+    padding: 0;        /* убрать отступы */
+}
+
+.open img {
+    display: block;    /* показать картинку */
 }
 /* ШРИФТЫ: 
 заголовки - unbounded
