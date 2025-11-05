@@ -38,7 +38,10 @@ p - 14 medium montserrat
 rightnow:
 p label - 13 medium montserrat
 p - 18 semibold montserrat
-p - 14 medium montserrat*/
+p - 14 medium montserrat
+
+
+*/
 
 html { font-size: 62.5%; }
 
@@ -204,6 +207,7 @@ section {
 
 .rent-date {
     min-height: 7.6rem;
+    padding: 2rem;
     width: 100%;
     border: none;
     border-radius: var(--radius-large);
@@ -421,7 +425,7 @@ section {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--gray-2);
-    margin: 0 1rem 0 0;
+    margin-right: 0 !important;
 }
 
 #DizrentalinMoscow {
@@ -447,7 +451,7 @@ section {
 }
 
 .rentalform h2 {
-    margin: 0 2rem 2.3rem 0;
+    margin-bottom: 2.3rem;
     color: var(--white);
 }
 
@@ -607,6 +611,10 @@ section {
     border: none;
 }
 
+.discont img {
+    border-radius: 2rem 2rem 0 0;
+}
+
 .discount p {
     margin: 0 3rem 0 3rem;
     color: var(--gray-3);
@@ -621,8 +629,8 @@ section {
 }
 
 .discount h3 {
-    font-family: 'Roboto', sans-serif;
-    margin: 3rem 3rem 1.4rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 3rem 0 1.4rem 3rem;
 }
 
 .reasons {
@@ -630,7 +638,7 @@ section {
 }
 
 .reasons h2 {
-    margin: 0 3rem 2.9rem 0;
+    margin-bottom: 2.9rem;
 }
 
 .reasons-grid {
