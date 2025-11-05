@@ -9,6 +9,58 @@
     <link rel="stylesheet" href="css/modern-normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Dizrental</title>
+    <style>
+        /* unbounded-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Unbounded';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/unbounded-v12-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* roboto-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/roboto-v49-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* montserrat-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-500 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-600 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -58,22 +110,22 @@
                     <label><input type="checkbox" class="cartype" value="suv">Внедорожник</label>
                 </li>
                 <li>
-                    <label><input type="checkbox" class="cartype" value="sport">Спорт</label>
+                    <label><input type="checkbox" class="cartype" value="sport">Бизнес</label>
                 </li>
                 <li>
-                    <label><input type="checkbox" class="cartype" value="premium">Премиум</label>
+                    <label><input type="checkbox" class="cartype" value="premium">Спорт</label>
                 </li>
                 <li>
-                    <label><input type="checkbox" class="cartype" value="business">Бизнес</label>
+                    <label><input type="checkbox" class="cartype" value="business">Спорткар</label>
                 </li>
                 <li>
-                    <label><input type="checkbox" class="cartype" value="sportcar">Спорткар</label>
+                    <label><input type="checkbox" class="cartype" value="sportcar">Премиум</label>
                 </li>
                 <li>
                     <label><input type="checkbox" class="cartype" value="comfort">Комфорт</label>
                 </li>
             </ul>
-            <button class="variants">Найти варианты</button>
+            <button id="variants" class="goldbtns">Найти варианты</button>
         </section>
 
         <section class="autopark">
@@ -96,7 +148,7 @@
                         <img src="..\Images\checkmark.svg" alt="checkmark"> 
                     </div>
                 </div>
-                <img src="..\Images\2021_Mazda_6_black.jpg" alt="2021 Mazda 6">
+                <img src="..\Images\2021_Mazda_6_black.jpg" alt="2021 Mazda 6" class="car-image">
                 <h3 class="car-name">2021 Mazda 6, 2021</h3>
                 <div class="specs">
                     <img src="..\Images\engine.svg" alt="engine">
@@ -104,7 +156,7 @@
                     <img src="..\Images\horse_power.svg" alt="horse-power">
                     <p>317 л.с.</p>
                 </div>
-                <button class="book">Забронировать</button>
+                <button id="book" class="goldbtns">Забронировать</button>
                 <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
             </article>
 
@@ -115,7 +167,7 @@
                         <img src="..\Images\checkmark-cross.svg" alt="checkmark"> 
                     </div>
                 </div>
-                <img src="..\Images\2022_Kia_Sportage_white.jpg" alt="Kia Sportage 2022">
+                <img src="..\Images\2022_Kia_Sportage_white.jpg" alt="Kia Sportage 2022" class="car-image">
                 <h3 class="car-name">Kia Sportage, 2022</h3>
                 <div class="specs">
                     <img src="..\Images\engine.svg" alt="engine">
@@ -123,7 +175,7 @@
                     <img src="..\Images\horse_power.svg" alt="horse-power">
                     <p>317 л.с.</p>
                 </div>
-                <button class="book">Забронировать</button>
+                <button id="book" class="goldbtns">Забронировать</button>
                 <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
             </article>
 
@@ -134,7 +186,7 @@
                         <img src="..\Images\checkmark.svg" alt="checkmark"> 
                     </div>
                 </div>
-                <img src="..\Images\2018_Lexus_IS_grey.jpg" alt="2018 Lexus IS">
+                <img src="..\Images\2018_Lexus_IS_grey.jpg" alt="2018 Lexus IS" class="car-image">
                 <h3 class="car-name">Lexus IS, 2018</h3>
                 <div class="specs">
                     <img src="..\Images\engine.svg" alt="engine">
@@ -142,7 +194,7 @@
                     <img src="..\Images\horse_power.svg" alt="horse-power">
                     <p>317 л.с.</p>
                 </div>
-                <button class="book">Забронировать</button>
+                <button id="book" class="goldbtns">Забронировать</button>
                 <p>от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
             </article>
 
@@ -153,7 +205,7 @@
                         <img src="..\Images\checkmark.svg" alt="checkmark"> 
                     </div>
                 </div>
-                <img src="..\Images\2018_Lexus_IS_white.jpg" alt="2021 Mazda 6">
+                <img src="..\Images\2018_Lexus_IS_white.jpg" alt="2021 Mazda 6" class="car-image">
                 <h3 class="car-name">2021 Mazda 6, 2021</h3>
                 <div class="specs">
                     <img src="..\Images\engine.svg" alt="engine">
@@ -161,7 +213,7 @@
                     <img src="..\Images\horse_power.svg" alt="horse-power">
                     <p>317 л.с.</p>
                 </div>
-                <button class="book">Забронировать</button>
+                <button id="book" class="goldbtns">Забронировать</button>
                 <p class="price">от <span style="font-weight: bold; font-size: 24px; color: black;">7150</span> руб/сут.</p>
             </article>
         
@@ -244,9 +296,11 @@
                 </li>
             </ol>
 
-            <button class="arrows"><img src="../Images\arrow-back.svg" alt="back"></button>
-            <button class="arrows"><img src="../Images\arrow-forward.svg" alt="forward"></button>
-            <p id="counter">1</p><p>/5</p>
+            <div class="counter">
+                <button class="arrows"><img src="../Images\arrow-back.svg" alt="back"></button>
+                <button class="arrows"><img src="../Images\arrow-forward.svg" alt="forward"></button>
+                <p id="one">1</p><p id="five">/5</p>
+            </div>
             
             <p id="eliterental">Аренда элитных автомобилей в Москве предоставляет возможность воплотить мечты в реальность и создать незабываемые впечатления. Будь то эксклюзивная свадьба, впечатляющий деловой приезд или просто желание испытать роскошь и элегантность автомобиля премиум-класса, эта услуга открывает двери в мир высокого стиля и комфорта.</p>
             <p>Аренда элитных автомобилей в Москве - это возможность позволить себе немного роскоши и создать незабываемые моменты, которые останутся в памяти надолго.</p>
@@ -338,7 +392,7 @@
         <p>Рабочие часы: с 10:00 до 20:00</p>
         <button id="call">Заказать звонок</button>
         <span class="contacts">
-            <img src="../Images/placemark.svg" alt="placemark">
+            <img src="../Images/placemark.svg" alt="placemark" id="placemark">
             <p>г. Москва, Автомобильный проезд, д.3 стр.5</p>
         </span>
         <span class="contacts">
@@ -351,8 +405,10 @@
         </nav>
         <nav class="dropdowns">
             <div class="for-clients">
-                <h3 id="KLIENTAM">КЛИЕНТАМ</h3>
-                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                <div class="clients-open">
+                    <h3 id="KLIENTAM">КЛИЕНТАМ</h3>
+                    <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                </div>
                 <ul>
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
@@ -363,8 +419,10 @@
             </div>
             
             <div class="autopark-f">
-                <h3>АВТОПАРК</h3>
-                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                <div class="clients-open">
+                    <h3 id="KLIENTAM">АВТОПАРК</h3>
+                    <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                </div>
                 <ul class="dropdown">
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
@@ -375,8 +433,10 @@
             </div>
             
             <div class="events">
-                <h3>МЕРОПРИЯТИЕ</h3>
-                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                <div class="clients-open">
+                    <h3 id="KLIENTAM">МЕРОПРИЯТИЕ</h3>
+                    <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                </div>
                 <ul class="dropdown">
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Условия</a></li>
@@ -385,9 +445,8 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
-            
         </nav>
-        <p>© 2023 DizRental</p>
+        <p id="copyright">© 2023 DizRental</p>
         <p>Политика конфиденциальности</p>
     </footer>
 </body>
