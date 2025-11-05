@@ -45,6 +45,7 @@ html { font-size: 62.5%; }
 html, body {
     min-width: 300px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 p, li, input, button, a {
@@ -122,6 +123,7 @@ body {
     line-height: 1.5; 
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -173,7 +175,8 @@ section {
 
 .bonuses {
     display: flex;
-    gap: 1.4rem;
+    width: 100vw;
+    gap: 1.8rem;
     font-size: 1.5rem;
     white-space: nowrap;
     overflow-x: auto;
@@ -181,8 +184,13 @@ section {
     margin-top: 4rem;
     padding: 0;
     list-style: none;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.bonus {
+    display: flex;
+    gap: 1.7rem;
 }
 
 .bonuses li {
@@ -283,14 +291,18 @@ section {
     list-style: none;
     display: flex;
     gap: 1.4rem;
-    padding: 0;
-    margin: 0;
+    padding: 0 2rem 0 0;
+    margin: 0 -2rem 0 0;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    width: 100%;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    width: 100vw;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.autopark-li:nth-child(5) {
+    margin-right: 2rem;
 }
 
 .autopark li p {
@@ -545,6 +557,7 @@ section {
     margin: 4rem 0 3rem 0;
     padding: 0;
     list-style: none;
+    width: 100vw;
 }
 
 .rightnow ol li:nth-child(5) {
