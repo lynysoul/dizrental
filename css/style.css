@@ -204,7 +204,7 @@ section {
 
 .rent-date {
     min-height: 7.6rem;
-    width: 28rem;
+    width: 100%;
     border: none;
     border-radius: var(--radius-large);
     background-color: var(--white-1);
