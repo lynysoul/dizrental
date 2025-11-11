@@ -215,9 +215,6 @@ section {
 }
 
 .checkbox-cartype {
-    /*display: flex;
-    flex-wrap: wrap;*/
-    
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -228,7 +225,6 @@ section {
 }
 
 .checkbox-cartype li {
-    flex: 0 0 calc(50% - 5px);
     box-sizing: border-box;
 }
 
