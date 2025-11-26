@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/unbounded-v12-cyrillic_latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/roboto-v49-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/montserrat-v31-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dizrental</title>
+    <style>
+        /* unbounded-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Unbounded';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/unbounded-v12-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* roboto-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/roboto-v49-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* montserrat-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-500 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-600 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#"><img src="..\Images\logo.webp" alt="logo" class="logo"></a>
+            <nav class="hbuttons">
+                <a href="#"><img src="../Images/h_car.svg" alt="car"></a>
+                <a href="#"><img src="../Images/h_profile.svg" alt="profile"></a>
+                <button id="menu-toggle"><img src="../Images/h_menu.svg" alt="menu"></button>
+            </nav>
+            
+            
+            <ul class="menu">
+                <li><a href="#">Подобрать авто</a></li>
+                <li><a href="#">Условия</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper-main">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                </ul>
+            </div>
+            
+            <div class="mainbar">
+                <h1>Информационная панель</h1>
+                <div class="mainbar-grid">
+                    <img src="../Images/pattern1.png" alt="Pattern 1" class="card">
+                    <img src="../Images/pattern2.png" alt="Pattern 2" class="card">
+                    <img src="../Images/pattern2.png" alt="Pattern 3" class="card">
+                    <img src="../Images/pattern2.png" alt="Pattern 4" class="card">
+                    <img src="../Images/pattern5.png" alt="Pattern 5" class="card">
+                    <img src="../Images/pattern5.png" alt="Pattern 6" class="card">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo-button">
+                <img src="../Images/logo-footer.webp" alt="logo">
+                <button id="call">Заказать звонок</button>
+            </div>
+            
+            <h2 style="display: none">Контакты</h2>
+            <h3>+7 (499) 110-20-47</h3>
+            <p>Рабочие часы: с 10:00 до 20:00</p>
+            
+            <span class="contacts">
+                <img src="../Images/placemark.svg" alt="placemark" id="placemark">
+                <p>г. Москва, Автомобильный проезд, д.3 стр.5</p>
+            </span>
+            <span class="contacts">
+                <img src="../Images/mail.svg" alt="mail">
+                <p id="mailf">info@dizrental.ru</p>
+            </span>
+            <nav class="socials">
+                <a href="#"><img src="../Images/WhatsApp.svg" alt="WhatsApp"></a>
+                <a href="#"><img src="../Images/Telegram.svg" alt="Telegram"></a>
+            </nav>
+            <p id="copyright">© 2023 DizRental</p>
+            <p>Политика конфиденциальности</p>
+            <a href="#">gallery.html</a>
+        </div>
+    </footer>
+</body>
+
+</html>
