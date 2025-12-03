@@ -4,7 +4,7 @@
     --black-2: #181818;
     --black-3: #0A0A0A;
     --black-4: rgba(31, 31, 31, 1);
-    --black-5:  #121212;
+    --black-5: #121212;
     --black-6: #1d1d1d;
     --black-7: #141414;
     --black-8: #0C0C0C;
@@ -51,6 +51,7 @@ html, body {
     min-width: 300px;
     width: 100%;
     overflow-x: hidden;
+    background-color: #f4f4f4;
 }
 
 p, li, input, button, a {
@@ -85,87 +86,14 @@ header {
     display: none;
 }
 
-@media (min-width: 1280px) {
-    header {
-        min-height: 12.4rem;
-        padding: 3.7rem 5.9rem 4.1rem 6rem;
-    }
-
-    .header-container {
-        max-width: 180rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    .logo {
-        object-fit: cover;
-        height: 100%;
-        width: auto;
-    }
-
-    .city-buttons,
-    .desktop-nav,
-    .header-socials,
-    .number-call {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .number-call p {
-        font-family: 'Unbounded', sans-serif;
-        font-weight: bold;
-        font-size: 1.8rem;
-        color: var(--white);
-    }
-
-    .number-call button {
-        border: 0.2rem solid var(--gray-1);
-        font-size: 1.3rem;
-    }
-
-    .desktop-nav a {
-        text-decoration: none;
-        color: var(--white);
-    }
-
-    .city-buttons {
-        height: 3.8rem;
-        gap: 1px;
-        
-    }
-
-    .city-buttons p {
-        padding: 0 0.7rem;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
-    
-    #citymoscow {
-        border: 0;
-        color: var(--white);
-        background: var(--black-8);
-        border-radius: 0.6rem 0 0 0.6rem;
-        height: 3.8rem;
-    }
-
-    #citydubai {
-        border: 0;
-        color: var(--gray-6);
-        background: var(--black-8);
-        border-radius: 0 0.6rem 0.6rem 0;
-        height: 3.8rem;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
-
-    .mobile-menu {
-        display: none !important;
-    }
+.checkbox-cartype {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+    padding: 0;
+    font-size: 1.3rem;
+    margin: 3.4rem 0 3.4rem 0;
 }
 
 .wrapper {
@@ -325,15 +253,7 @@ section {
     background-color: var(--white-1);
 }
 
-.checkbox-cartype {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1rem;
-    padding: 0;
-    font-size: 1.3rem;
-    margin: 3.4rem 0 3.4rem 0;
-}
+
 
 .checkbox-cartype li {
     box-sizing: border-box;
@@ -456,6 +376,17 @@ section {
     border-radius: var(--radius-large);
     padding: 1.6rem 1.6rem 3rem 3rem;
     margin: 1.4rem 0 0 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.car-page h3 {
+    text-align: left;
+}
+
+.car-page p {
+    text-align: left;
 }
 
 .car-image {
@@ -698,6 +629,22 @@ section {
     color: var(--white-02);
 }
 
+.rightnow-h2-desktop {
+    display: none !important;
+}
+
+.rightnow-h2-mobile {
+    display: inline !important;
+}
+
+.rightnow-mobile {
+    display: block !important;
+}
+
+.rightnow-desktop {
+    display: none !important;
+}
+
 .counter {
     display: flex;
 }
@@ -722,10 +669,9 @@ section {
 }
 
 .discount {
-    background: var(--white);
-    border-radius: 2rem;
-    border: none;
-}
+        display: flex !important;
+        flex-direction: column;
+    }
 
 .discont img {
     border-radius: 2rem 2rem 0 0;
@@ -945,6 +891,10 @@ a:-webkit-any-link {
     margin: 0 -2rem;
 }
 
+.dropdown:nth-child(1) {
+    text-align: center;
+}
+
 .dropdowns li {
     background: var(--black-6);
     padding: 1rem 0;
@@ -960,6 +910,15 @@ a:-webkit-any-link {
     font-size: 1.3rem;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+}
+
+.text-below-car {
+    margin: 0;
+    background: var(--white);
+    padding: 4rem auto;
+    padding-right: 8rem;
+    text-align: left;
+    border-radius: 0 0 2rem 2rem;
 }
 
 .clients-open {
@@ -988,3 +947,840 @@ a:-webkit-any-link {
 #copyright {
     margin: 3.4rem 0 1.2rem 0;
 }
+
+.rent-text-desktop {
+    display: none !important;
+}
+
+.Dubai-img-desktop {
+    display: none !important;
+}
+
+.numbers {
+    font-size: 1.3rem !important;
+}
+
+.Moscow-img-mobile {
+    display: block !important;
+}
+
+.Moscow-img-desktop {
+    display: none !important;
+}
+
+.car-page:nth-child(n+5) {
+    display: none !important;
+}
+
+.logo-footer-desk {
+    display: none !important;
+}
+
+.logo-footer-mobile {
+    display: block !important;
+}
+
+@media (min-width: 700px) {
+    .car-pages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .car-page:nth-child(n+5) {
+        display: flex !important;
+    }
+
+    .our-autopark h2 {
+        font-size: 4.8rem;
+        text-wrap: nowrap;
+    }
+
+    .our-autopark {
+        display: flex;
+        margin: 4rem 0 4.8rem 0;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6rem;
+        width: 48% !important;
+    }
+
+    .car-page:nth-child(n+7) {
+        display: none !important;
+    }
+    
+    .rent-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 17%;
+        text-wrap: nowrap;
+    }
+
+    .carwrapper {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .car-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white);
+        border: none;
+        border-radius: var(--radius-large);
+        padding: 1.6rem 1.6rem 3rem 3rem;
+        margin: 1.4rem 0 0 0;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .car-page h3 {
+        width: 100%;
+    }
+
+    .car-page p {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 1080px) {
+    header {
+        min-height: 12.4rem;
+        padding: 3.7rem 5.9rem 4.1rem 6rem;
+    }
+
+    .header-container {
+        max-width: 180rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .logo {
+        object-fit: cover;
+        height: 100%;
+        width: auto;
+    }
+
+    .city-buttons,
+    .desktop-nav,
+    .header-socials,
+    .number-call {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .number-call p {
+        font-family: 'Unbounded', sans-serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: var(--white);
+        text-wrap: nowrap;
+        padding-right: 3.2rem;
+    }
+
+    .number-call button {
+        border: 0.2rem solid var(--gray-1);
+        font-size: 1.3rem;
+    }
+
+    #call {
+        width: 14.9rem;
+    }
+    .desktop-nav a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .city-buttons {
+        display: flex;
+        height: 3.8rem;
+        gap: 1px;
+    }
+
+    .city-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .city-buttons p {
+        padding: 0 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0 0 0 0.7rem;
+    }
+    
+    .city-buttons img {
+        display: flex;
+    }
+
+    #citymoscow {
+        border: 0;
+        color: var(--white);
+        background: var(--black-8);
+        border-radius: 0.6rem 0 0 0.6rem;
+        height: 3.8rem;
+    }
+    
+    #citymoscow p {
+        color: var(--white);
+    }
+
+    #citydubai {
+        border: 0;
+        color: var(--gray-6);
+        background: var(--black-8);
+        border-radius: 0 0.6rem 0.6rem 0;
+        height: 3.8rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    #menu-toggle {
+        display: none !important;
+    }
+
+    .wrapper-first {
+        width: 68.75%;
+        margin: 0 auto 30.7rem auto;
+    }
+
+    .first {
+        padding-bottom: 1.5rem;
+        max-width: 96.875vw;
+        margin: 0 auto;
+        border-radius: 0 0 3.6rem 3.6rem;
+    }
+
+    .first h1 {
+        text-align: center;
+        font-size: 8.9rem;
+        padding: 13rem 20% 4rem 20%; /* 21.5%*/
+        line-height: 9.5rem;
+    }
+
+    .first p {
+        text-align: center;
+        font-size: 2.4rem;
+        padding-bottom: 12rem;
+    }
+
+    .first hr {
+        margin-bottom: 7rem;
+    }
+
+    .first ol {
+        margin-bottom: 15.6rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6rem;
+    }
+
+    .rent {
+        position: relative;
+        background: transparent;
+        display: flex;
+        height: 13.55rem;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rent h2 {
+        font-size: 2.2rem;
+    }
+    
+    .wrapper-rent {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 6rem 7rem;
+        background: var(--white);
+        border-radius: 2rem;
+        margin-top: -13.6rem;
+    }
+
+    .rent-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4.9rem;
+    }
+
+    .start-end-rent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .start-rent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .end-rent {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .checkbox-cartype {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
+
+    .variants-goldbtns {
+        width: 20%;
+        background: linear-gradient(to right, var(--gold-1), var(--gold-2));
+        border: none;
+        border-radius: var(--radius-large);
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--white);
+        height: fit-content;
+        padding: 2.8rem 3.4rem;
+    }
+
+    .our-autopark {
+        display: flex;
+        margin: 4rem 0 4.8rem 0;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6rem;
+        width: 48% !important;
+    }
+
+    
+    .our-autopark h2 {
+        font-size: 4.8rem;
+        text-wrap: nowrap;
+    }
+
+    .car-pages {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+        height: 149.7rem;
+    }
+
+    .car-page:nth-child(n+7) {
+        display: flex !important;
+    }
+
+    .rent-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 17%;
+        text-wrap: nowrap;
+    }
+
+    .car-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white);
+        border: none;
+        border-radius: var(--radius-large);
+        padding: 1.6rem 1.6rem 3rem 3rem;
+        margin: 1.4rem 0 0 0;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .car-page h3 {
+        width: 100%;
+    }
+
+    .car-page p {
+        text-align: left !important;
+    }
+
+    #Moscow-alley {
+        font-size: 2.8rem;
+        margin: 12rem auto 3.6rem auto;
+    }
+
+    #Luxury-cars {
+        margin-bottom: 8rem;
+        font-size: 1.8rem;
+    }
+
+    .rent-text-desktop {
+        display: block !important;
+        width: 100%;
+        margin-bottom: 11.8rem;
+    }
+
+    .rent-text-mobile {
+        display: none !important;
+    }
+    
+    .rentalform .wrapper h2 {
+        font-size: 4.8rem;
+        margin: 8.2rem auto 7rem auto;
+    }
+
+    .form-to-rent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 13.6rem;
+    }
+
+    #DizrentalinMoscow {
+        font-size: 2.8rem;
+    }
+
+    #thanksto {
+        margin: 3.6rem auto 11.8rem auto;
+    }
+
+    #threesteps {
+        text-align: center;
+        font-size: 4.8rem;
+        width: 53%;
+        margin: auto;
+        line-height: 6.2rem;
+        margin: 8rem auto 2rem auto;
+    }
+    
+    .steps {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2.4rem;
+        margin-bottom: 8rem;
+    }
+
+    .rightnow-h2-mobile {
+        display: none !important;
+    }
+
+    .rightnow-mobile {
+        display: none !important;
+    }
+    
+    .rightnow-desktop {
+        display: flex !important;
+        flex-direction: column;
+        gap:7rem;
+        width: 40%;
+    }
+
+    .rightnow-desktop ol {
+        height: 70%;
+    }
+    
+    .rightnow-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 13.6rem;
+    }
+
+    .discount:nth-child(n+2) {
+        display: none !important;
+    }
+
+    .discount {
+        display: flex !important;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .discount img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .Moscow-img-desktop-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .text-below-car {
+        margin: 0;
+        background: var(--white);
+        padding: 4rem auto;
+        padding-right: 8rem;
+        text-align: left;
+        border-radius: 0 0 2rem 2rem;
+    }
+    
+    .text-below-car h3 {
+        font-size: 2rem;
+    }
+
+    .rightnow-text {
+        width: 64.8%;
+    }
+
+    .rightnow {
+        padding: 12rem 0;
+    }
+    
+    .text-below-car {
+
+    }
+    #eliterentalbottom {
+        font-size: 1.8rem;
+    }
+
+    .rightnow-h2-desktop {
+        display: block !important;
+        font-size: 4.8rem;
+        margin-bottom: 5rem;
+        line-height: 6.2rem;
+    }
+
+    #eliterental {
+        font-size: 2.5rem;
+    }
+
+    .rightnow-text {
+        font-size: 1.8rem;
+    }
+
+    .discount {
+        flex: 1;
+        width: 100%;
+        display: block;
+    }
+
+    .reasons h2 {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        margin-top: 12rem;
+        margin-bottom: 7rem;
+        width: 57%;
+    }
+
+    .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 8rem;
+    }
+
+    .Dubai-img-desktop {
+        display: block !important;
+        margin: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Dubai-img-mobile {
+        display: none !important;
+    }
+
+    .Dubai-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        gap: 11.2rem;
+        margin-top: 12rem;
+        margin-bottom: 11rem;
+    }
+
+    .Dubai-img-desktop {
+        width: 42%;
+        display: block !important;
+        flex-shrink: 0;
+        margin: 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .Dubai .wrapper h2 {
+        font-size: 4.8rem;
+        line-height: 6.2rem;
+        margin-bottom: 5rem;
+    }
+
+    .Dubai .wrapper p {
+        font-size: 1.8rem;
+    }
+
+    #guarantee {
+        font-size: 2.8rem;
+    }
+
+    #guarantee-below {
+        font-size: 1.4rem;
+    }
+
+    .Moscow-img-mobile {
+        display: none !important;
+    }
+
+    .Moscow-img-desktop-containter {
+        display: block !important;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .Moscow-img-desktop {
+        display: block !important;
+        margin: 0;
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    
+    .Moscow-section-desktop {
+        display: flex;
+        min-height: 52.9rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 11.2rem;
+        width: 100%;
+        margin-bottom: 12rem;
+    }
+
+    .bottomdubai-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Moscow-section-desktop-text {
+        width: 100%;
+    }
+
+    #Moscow {
+        margin-top: 0;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20%;
+    }
+
+    .footer-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-text {
+        text-align: right;
+        width: 38%;
+    }
+
+    .callback h3 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .contact {
+        text-align: left;
+    }
+    
+    .clients-open {
+        padding-left: 0;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    #copyright {
+        margin: 0;
+    }
+
+    .callback {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    #call {
+        padding: 1.2rem 2rem;
+        text-wrap: nowrap;
+        font-size: 1.3rem;
+    }
+
+    .dropdowns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        gap: 16.3%;
+    }
+
+    #footer-hr-desktop {
+        height: 1px;
+        width: 100%;
+        margin: 4.6rem auto;
+    }
+
+    .dropdown {
+        display: inline !important;
+        text-align: left;
+    }
+
+    .contacts {
+        justify-content: flex-end;
+    }
+
+    .logo-footer-mobile {
+        display: none !important;
+    }
+
+    .logo-footer-desk {
+        display: block !important;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1500px) {
+    header {
+        min-height: 12.4rem;
+        padding: 3.7rem 5.9rem 4.1rem 6rem;
+    }
+
+    .header-container {
+        max-width: 180rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .logo {
+        object-fit: cover;
+        height: 100%;
+        width: auto;
+    }
+
+    .city-buttons,
+    .desktop-nav,
+    .header-socials,
+    .number-call {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .desktop-nav {
+        display: contents !important;
+    }
+
+    .number-call p {
+        font-family: 'Unbounded', sans-serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: var(--white);
+        text-wrap: nowrap;
+        padding-right: 3.2rem;
+    }
+
+    .number-call button {
+        border: 0.2rem solid var(--gray-1);
+        font-size: 1.3rem;
+    }
+
+    #call {
+        width: 14.9rem;
+    }
+    .desktop-nav a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .city-buttons {
+        display: flex;
+        height: 3.8rem;
+        gap: 1px;
+    }
+
+    .city-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .city-buttons p {
+        padding: 0 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0 0 0 0.7rem;
+    }
+    
+    .city-buttons img {
+        display: flex;
+    }
+
+    #citymoscow {
+        border: 0;
+        color: var(--white);
+        background: var(--black-8);
+        border-radius: 0.6rem 0 0 0.6rem;
+        height: 3.8rem;
+    }
+    
+    #citymoscow p {
+        color: var(--white);
+    }
+
+    #citydubai {
+        border: 0;
+        color: var(--gray-6);
+        background: var(--black-8);
+        border-radius: 0 0.6rem 0.6rem 0;
+        height: 3.8rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .clients-open {
+        background: none !important;
+    }
+    #menu-toggle {
+        display: none !important;
+    }
+}
+
