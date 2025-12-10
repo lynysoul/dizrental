@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/unbounded-v12-cyrillic_latin-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/roboto-v49-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/truetype" href="../fonts/montserrat-v31-cyrillic_latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Dizrental</title>
+    <style>
+        /* unbounded-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Unbounded';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/unbounded-v12-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* roboto-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/roboto-v49-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* montserrat-regular - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-500 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-600 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* montserrat-700 - cyrillic_latin */
+        @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-container">
+                <a href="#"><img src="..\Images\logo.webp" alt="logo" class="logo"></a>
+                
+                <div class="city-buttons">
+                    <button id="citymoscow"><img src="../Images/placemark.svg" alt=""><p>МОСКВА</p></button>
+                    <button id="citydubai"><img src="../Images/placemark_gray.svg" alt=""><p>ДУБАЙ</p></button>
+                </div>
+
+                <div class="desktop-nav">
+                    <a href="#">Подобрать авто</a>
+                    <a href="#">Условия</a>
+                    <a href="#">Цены</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Контакты</a>
+                </div>
+                
+                <nav class="header-socials">
+                    <a href="#"><img src="../Images/WhatsApp.svg" alt="WhatsApp"></a>
+                    <a href="#"><img src="../Images/Telegram.svg" alt="Telegram"></a>
+                </nav>
+
+                <div class="number-call">
+                    <p>+7 (499) 110-20-47</p>
+                    <button id="call">Заказать звонок</button>
+                </div>
+
+                <nav class="hbuttons">
+                    <a href="#"><img src="../Images/h_car.svg" alt="car"></a>
+                    <a href="#"><img src="../Images/h_profile.svg" alt="profile"></a>
+                    <button id="menu-toggle"><img src="../Images/h_menu.svg" alt="menu"></button>
+                </nav>
+                
+                
+                <ul class="mobile-menu">
+                    <li><a href="#">Подобрать авто</a></li>
+                    <li><a href="#">Условия</a></li>
+                    <li><a href="#">Цены</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <form class="dizrental-form"
+                    action="https://httpbin.org/post" 
+                    method="POST"
+                    enctype="application/x-www-form-urlencoded"
+                >
+                    <h2>Личные данные:</h2>
+
+                    <label for="name" class="required">Имя*</label>
+                    <input type="text" placeholder="Глеб" name="Name" class="typeform" required>
+
+                    <label for="role" class="required">Роль*</label>
+                    <select id="role" name="role" class="typeform" required>
+                        <option value="" disabled selected>Выберите роль</option>
+                        <option value="student">Студент</option>
+                        <option value="teacher">Преподаватель</option>
+                    </select>
+
+                    <label for="date" class="required">Дата рождения*</label>
+                    <input type="date" placeholder="dd.mm.yyyy" name="Date" class="typeform">
+
+                    <h2 id="contact">Контактные данные:</h2>
+
+                    <label for="email" class="required">email*</label>
+                    <input type="email" placeholder="yourmail@mail.com" name="Name" class="typeform">
+
+                    <label for="password" class="required">Пароль*</label>
+                    <input type="password" placeholder="Ваш пароль" name="Password" class="typeform">
+
+                    <label for="phone" id="phone">Телефон</label>
+                    <input type="tel" placeholder="+7 999 999 99 99" name="Phone" class="typeform">
+
+                    <label for="interval" class="required">Удобный интервал для связи*</label>
+                    <select id="interval" name="interval" class="typeform" required>
+                        <option value="" disabled selected>Выберите интервал</option>
+                        <option value="morning">Утро</option>
+                        <option value="day">День</option>
+                        <option value="evening">Вечер</option>
+                        <option value="night">Ночь</option>
+                    </select>
+
+                    <p id="star">Поля обязательные к заполнению *</p>
+
+                    <button type="submit" class="cancelbutton">
+                        <img src="..\Images\crossmark.svg" alt="cross">
+                        Сбросить
+                    </button>
+                    <button type="submit" class="goldbtns">
+                        <img src="..\Images\checkmark_thing.svg" alt="check">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+            
+
+            
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-text">
+                    <img class="logo-footer-mobile" src="../Images/logo-footer.webp" alt="logo">
+                    <img class="logo-footer-desk" src="../Images/footer-logo-desk.webp" alt="logo">
+                    <h2 style="display: none">Контакты</h2>
+                    <div class="callback">
+                        <div class="contact">
+                            <a href="tel:+74991102047" id="footerphone">+7 (499) 110-20-47</a>
+                            <p>Рабочие часы: с 10:00 до 20:00</p>
+                        </div>
+                        <button id="call">Заказать звонок</button>
+                    </div>
+                    
+                    <span class="contacts">
+                        <img src="../Images/placemark.svg" alt="placemark" id="placemark">
+                        <p>г. Москва, Автомобильный проезд, д.3 стр.5</p>
+                    </span>
+                    <span class="contacts">
+                        <img src="../Images/mail.svg" alt="mail">
+                        <a href="mailto:info@dizrental.ru" id="mailto">info@dizrental.ru</a>
+                    </span>
+                    <nav class="socials">
+                        <a href="#"><img src="../Images/WhatsApp.svg" alt="WhatsApp"></a>
+                        <a href="#"><img src="../Images/Telegram.svg" alt="Telegram"></a>
+                    </nav>
+                </div>
+                
+                <div class="footer-options">
+                    <nav class="dropdowns">
+                        <div class="for-clients">
+                            <div class="clients-open">
+                                <h3 id="KLIENTAM">КЛИЕНТАМ</h3>
+                                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                            </div>
+                            <ul class="dropdown">
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Условия</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="autopark-f">
+                            <div class="clients-open">
+                                <h3 id="KLIENTAM">АВТОПАРК</h3>
+                                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                            </div>
+                            <ul class="dropdown">
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Условия</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="events">
+                            <div class="clients-open">
+                                <h3 id="KLIENTAM">МЕРОПРИЯТИЕ</h3>
+                                <button class="open"><img src="../Images/arrow-down.svg" alt="open"></button>
+                            </div>
+                            <ul class="dropdown">
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Условия</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <hr id="footer-hr-desktop">
+                    <div class="copyright">
+                        <p id="copyright">© 2023 DizRental</p>
+                        <p>Политика конфиденциальности</p>
+                        <a href="../form.html">form.html</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
